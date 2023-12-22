@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" width="device-width">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href='assets/css/style.css' rel='stylesheet' type='text/css'>
+    <title>Login</title>
+</head>
+<body>
+    <div class="outerCointainer">
+        <div class="container">
+            <h2 id="welcomeMessage">Welcome to Battleship!</h2>
+        </div>
+        <div class="container">
+            <form name="form" id="usernameForm" method="GET" action="gameplay.html">
+                <div id="inputDiv">
+                    <label for="username">UserName: </label>
+                    <input name="username" id="username" type="text" placeholder="Username" required
+                        pattern="[a-zA-Z0-9]{4,20}">
+                </div>
+                <button class="button" id="submitButton" type="submit">Submit</button>
+            </form>
+        </div>
+        <table id="highScores">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>    
+    <script type="text/javascript" src ="assets/js/highscores.js"></script>
+</body>
+
+</html>

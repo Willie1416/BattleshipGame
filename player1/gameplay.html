@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" >
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href='assets/css/style.css' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<title>Battleship</title>
+</head>
+
+<body id="gamePlay">
+	<div id="welcomeDiv">
+		<h3 id="usernameDisplay">USERNAME: </h3>
+	</div>
+	<div id="gameplayContainer">
+		<div id="leftDiv">
+			<table id="table">
+			</table>
+			<div id="restartDiv">
+				<button id="restartButton" class="button" type="reset">Restart</button>
+			</div>
+		</div>
+		<div id="rightDiv">
+			<table id="minitable">
+			</table>
+			<div id="messageDiv"></div>
+			<div id="resetDiv">
+				<button id="clearMessage" class="button" type="reset">Clear messages</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="http://127.0.0.1:3000/socket.io/socket.io.js" type="text/javascript"></script>
+	<script src="assets/js/mySocket.js" type="text/javascript"></script>
+	<script type="text/javascript" src="assets/js/models.js"></script>
+	<script type="text/javascript" src="assets/js/view.js"></script>
+	<script type="text/javascript" src="assets/js/listeners.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
