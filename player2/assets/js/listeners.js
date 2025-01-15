@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	generateTable();
 	miniTable();
-	populateMiniTable();
+	populateMiniTable()
 });
 
 //User clicks on the game board and then take the appropriate actions.

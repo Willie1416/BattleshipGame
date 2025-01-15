@@ -3,8 +3,7 @@ var vessels = [["Cruiser", 2], ["Submarine", 3], ["Destroyer", 4], ["Battleship"
 var vesselName = 0; // Variable to accesss vessel name in vessels array
 var vesselLength = 1; // Variable to accesss vessel length in vessels array
 var allVessels = []; // Array to store all vessels put on the gameboard
-var player1Route = 'http://127.0.0.1:3000/player1' // Route name that have the coordinates for player 1
-var player2Route = 'http://127.0.0.1:3000/player2' // Route name that have the coordinates for player 2
+var player1Route = 'http://127.0.0.1:3000/player2' // Route name that have the coordinates for player 1
 
 
 
@@ -56,9 +55,9 @@ var ship = {
 }
 
 var battleship = {
-    //Game board and status members
+    //Game board and status member
     board: [],
-    status: " ", 
+    status: " ",
 
     initialize: function () {
         //Initalize an 10x10 empty board every time game is started or restarted
@@ -199,8 +198,6 @@ var battleship = {
         }
     },
 
-
-
     //Checks if all ships are sunken in the ships array to determine if the game is over.
     sunkenShips: function () {
         for (let i = 0; i < this.allVessels.length; i++) {
@@ -216,7 +213,7 @@ var battleship = {
 //Function that makes a AJAX call to their specific route to send current status after a move and update their score accordingly
 function sendStatusURL(status, coordiantes){
     username = gamePlay.getUsername(); // gets username
-    var url = new URL(player2Route); // creates a new url
+    var url = new URL(player1Route); // creates a new url
     var parameter = url.searchParams;
     //append the parameters to new url
     parameter.set('status', status); 
@@ -232,4 +229,6 @@ function sendStatusURL(status, coordiantes){
         })
 
 }
+
+
 

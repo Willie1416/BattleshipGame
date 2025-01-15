@@ -76,7 +76,6 @@ function generateTable() {
     while (table.firstChild) {
         table.removeChild(table.firstChild);
     }
-
     var headerRow = document.createElement("tr");
     headerRow.innerHTML = '<th></th>';
     //Create the table columns with labels A to J
@@ -147,12 +146,11 @@ function miniTable() {
 
 }
 
-
-//updates the minitable of the opposing players moves
 function opponentMoves(move){
     var table = document.getElementById("minitable")
     var coordinates = move[0] // Coordiantes that was played
     var style = move[1]; // Class to be added to the cell
+
 
     var xCoord = coordinates[0]; // Extract x coordinate
     var yCoord = coordinates[1]; // Extract y coordinate
@@ -166,8 +164,7 @@ function opponentMoves(move){
     }
 }
 
-
-// Route name that have the coordinates for player 2
+// Route name that have the coordinates for player 1
 var player1Route = 'http://127.0.0.1:3000/player1' 
 //Function that makes a request to the opposite player route to retrieve their moves if they already made moves before this player connected
 function populateMiniTable() {
@@ -205,7 +202,6 @@ function populateMiniTable() {
             console.error('Error fetching player data:', error);
         });
 }
-
 
 
 
